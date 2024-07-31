@@ -6,11 +6,9 @@ class NextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login'),
-        backgroundColor: Colors.blueAccent,
-      ),
+      backgroundColor: Colors.yellow.shade700,
       body: Padding(
+        
         padding: const EdgeInsets.all(16.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -47,9 +45,15 @@ class NextScreen extends StatelessWidget {
                 // For example, validate inputs or navigate to another screen
               },
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size(double.infinity, 50), backgroundColor: Colors.blueAccent,
+                minimumSize: const Size(double.infinity, 50),
+                backgroundColor: Colors.blueAccent,
               ),
-              child: const Text('Login'),
+              child: const Text(
+                'Login',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+                ),
             ),
             const SizedBox(height: 10),
             TextButton(
