@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_online_booking/screens/onboarding_screen1.dart';
+import 'package:travel_online_booking/screens/loginscreen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,13 +8,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow.shade200,
+      backgroundColor: const Color.fromARGB(236, 255, 255, 255),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              height: 530, // Adjust height as needed
+              height: 550, // Adjust height as needed
               child: Column(
                 children: <Widget>[
                   CarouselSlider.builder(
@@ -26,8 +26,7 @@ class HomeScreen extends StatelessWidget {
                           top: 140,
                         ), // Space between items
                         child: Container(
-                          width: double
-                              .infinity, // Make the container take full width
+                          width: 250, // Make the container take full width
                           height: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.blue,
@@ -41,13 +40,12 @@ class HomeScreen extends StatelessWidget {
                       );
                     },
                     options: CarouselOptions(
-                      autoPlay: false,
+                      autoPlay: true,
                       height: 500,
                       enlargeCenterPage: true,
-                      viewportFraction: 1.0, // Full width for each item
-                      aspectRatio: 16/10,
+                      viewportFraction: 0.6, // Full width for each item
+                      aspectRatio: 16 / 12,
                       initialPage: 2,
-                      
                     ),
                   ),
                 ],
@@ -75,7 +73,12 @@ class HomeScreen extends StatelessWidget {
             width: 400,
             height: 100,
             child: Padding(
-              padding: EdgeInsets.all(20.0),
+              padding: EdgeInsets.only(
+                top: 10,
+                bottom: 20,
+                left: 10,
+                right: 20,
+                ),
               child: Text(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac purus tortor. Sed sollicitudin arcu a tristique consequat.',
                 style: TextStyle(
@@ -94,7 +97,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const NextScreen(),
+                    builder: (context) => const Loginscreen(),
                   ),
                 );
               },
