@@ -12,15 +12,15 @@ class _SplashScreensState extends State<SplashScreens> {
   @override
   void initState() {
     super.initState();
-    _navigateToHomeScreen();
+    _navigateToLoadingScreen();
   }
 
-  void _navigateToHomeScreen() async {
+  void _navigateToLoadingScreen() async {
     await Future.delayed(const Duration(seconds: 3)); // Delay for 2 seconds
     // ignore: use_build_context_synchronously
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-          builder: (context) => const HomeScreen()), // Navigate to HomeScreen
+          builder: (context) => const LoadingScreen()), // Navigate to HomeScreen
     );
   }
 

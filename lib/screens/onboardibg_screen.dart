@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:travel_online_booking/screens/loginscreen.dart';
+import 'package:travel_online_booking/auth/loginscreen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class LoadingScreen extends StatelessWidget {
+  const LoadingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
